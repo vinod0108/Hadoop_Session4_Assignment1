@@ -19,7 +19,7 @@ public class RowFilter{
                            String[] words=line.split("|");
                            String company=words[0];
                            String product=words[1];
-                           if(company.contains("NA")||product.contains("NA"))
+                           if(!(company.contains("NA"))&&!(product.contains("NA")))
                                    con.write(v, new Text());
               }
   }
